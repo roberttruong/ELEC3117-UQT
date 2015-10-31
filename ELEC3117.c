@@ -1,4 +1,5 @@
 // ELEC3117 
+// Version 1.0
 // Robert Truong
 // Nabi Genc
 
@@ -191,17 +192,7 @@ int main(void)
 				dataRipple[i]=0;
 			}
 			
-			//testing REMOVE IN FINAL
-			m= floor((dataRipple[i]+1)*RIPPLE_SCALE);
-			testing[0]=floor(m/100)+INT_TO_ASCII;
-			testing[1]='.';
-			testing[2]=floor((m%100)/10)+INT_TO_ASCII;
-			testing[3]=m%10+INT_TO_ASCII;
-			testing[4]='\0';
-			//
-			
-			Lcd4_Set_Cursor(2,0);
-			Lcd4_Write_String(testing);
+
 			// Blick LED ladder while testing
 			if(i%2==0){
 				HC595Write(led_pattern[8]);
